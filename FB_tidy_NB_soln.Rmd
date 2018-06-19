@@ -231,6 +231,14 @@ ggplot(passengers %>% drop_na(), aes(x = Age, y = Fare, color = Sex)) +
   geom_point()
 ```
 
+This is odd to me because the two high-paying fares are both male, but in the following graph there is a high-fare male and female each?
+
+```{r message = FALSE}
+# Scatter plot of Age vs Fare
+ggplot(passengers, aes(x = Sex, y = Fare)) +
+  geom_point()
+```
+
 **What can you see here?** 
 
 Visualizing three variables on one plot is pretty cool, but what if wanted to throw the Survived variable into the mix to see if there are any apparent trends?
